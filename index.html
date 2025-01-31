@@ -23,24 +23,12 @@ body {
 </head>
 <body>
 
-<h2>CAT</h2>
-<p id="demo"></p>
-
-<h2>XAT</h2>
-<p id="xat"></p>
-
-<h2>SNAP</h2>
-<p id="snap"></p>
+<h2>GATE</h2>
+<p id="GATE"></p>
 
 <script>
 // Set the CAT date
-var catDate = new Date("Nov 26, 2023 12:00:00").getTime();
-
-// Set the XAT date
-var xatDate = new Date("Dec 20, 2023 12:00:00").getTime();
-
-// Set the SNAP date
-var snapDate = new Date("Dec 10, 2023 12:00:00").getTime();
+var catDate = new Date("Feb 15, 2025 12:00:00").getTime();
 
 // Update the countdown every 1 second
 var x = setInterval(function() {
@@ -53,22 +41,6 @@ var x = setInterval(function() {
   var catMinutes = Math.floor((catDistance % (1000 * 60 * 60)) / (1000 * 60));
   var catSeconds = Math.floor((catDistance % (1000 * 60)) / 1000);
   document.getElementById("demo").innerHTML = catDays + "d " + catHours + "h " + catMinutes + "m " + catSeconds + "s ";
-
-  // Calculate time remaining for XAT
-  var xatDistance = xatDate - now;
-  var xatDays = Math.floor(xatDistance / (1000 * 60 * 60 * 24));
-  var xatHours = Math.floor((xatDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var xatMinutes = Math.floor((xatDistance % (1000 * 60 * 60)) / (1000 * 60));
-  var xatSeconds = Math.floor((xatDistance % (1000 * 60)) / 1000);
-  document.getElementById("xat").innerHTML = xatDays + "d " + xatHours + "h " + xatMinutes + "m " + xatSeconds + "s ";
-
-  // Calculate time remaining for SNAP
-  var snapDistance = snapDate - now;
-  var snapDays = Math.floor(snapDistance / (1000 * 60 * 60 * 24));
-  var snapHours = Math.floor((snapDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var snapMinutes = Math.floor((snapDistance % (1000 * 60 * 60)) / (1000 * 60));
-  var snapSeconds = Math.floor((snapDistance % (1000 * 60)) / 1000);
-  document.getElementById("snap").innerHTML = snapDays + "d " + snapHours + "h " + snapMinutes + "m " + snapSeconds + "s ";
 
   if (catDistance < 0) {
     clearInterval(x);
